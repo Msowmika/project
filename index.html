@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="/script.js"></script>
+</head>
+<body>
+<header><div id="grp0" class="page" >
+       <div id="game">
+        <h1>ROCK</h1>
+        <h1>PAPER</h1>
+        <h1>SCISSORS</h1>
+    </div>
+    <div id="scoreboard">
+        <h4 id="computerScore">COMPUTER SCORE <br><span>0</span></h4>
+        <h4 id="playerScore">YOUR SCORE<br> <span>0</span></h4>
+    </div></header>
+
+
+<section id="game-page" class="hidden">
+<div class="choices"></div>
+    <button class="choice" id="rock" onclick="play('rock')"></button>
+    <button class="choice" id="scissors" onclick="play('scissors')"></button>
+    <button class="choice" id="paper" onclick="play('paper')"></button>
+</div>
+<div class="line1"></div>
+<div class="line2"></div>
+<div class="line3"></div>
+    
+    
+    <div class="hidden" id="gameRules">
+        <button class="close" id="clear" onclick="closeRules()"></button>
+        <h1 class="gr">Game Rules</h1>
+        <ul style="list-style-type: square">
+            <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li><br>
+            <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li><br>
+            <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li><br>
+            <li>If both players lay down the same hand, each player lays down another hand</li><br>
+        </ul>
+        
+    </div>
+    <div class="rules"><button id="rules" onclick="showRules()">RULES</button></div>
+    </section>
+
+   <div id="next-page" class="hidden">
+     <div class="head1">
+        
+        <h1 class="won">YOU WIN</h1>
+        <h3 class="h33">AGAINST PC</h3></div>
+        <div id="results">
+        
+            <div class="results hidden">
+                <div class="H">
+                <h2 class="results-heading">YOU PICKED</h2>
+                <div class="results-result"></div>
+            </div>
+            <div class="H">
+                <h2 class="results-heading">PC PICKED</h2>
+                <div class="results-result"></div>
+            </div>
+                <div class="results-winner hidden">
+                  <h3 class="results-text"></h3>
+                  
+                </div>
+            </div>
+        <button id="playagain" onclick="resetGame()">PLAY AGAIN</button>
+        <div class="foot"><button id="rules" style="margin-left:73vw;">RULES</button>
+        <button id="next" onclick="winCelebrationPage()">NEXT</button></div>
+  
+   
+    <section id="lost-page" class="hidden">
+       
+        <h1 class="loss">YOU LOST</h1>
+        <p class="lossp">AGAINST PC</p>
+        <div id="results">
+        
+            <div class="results hidden">
+                <div class="H">
+                <h2 class="results-heading">YOU PICKED</h2>
+                <div class="results-result"></div>
+            </div>
+            <div class="H">
+                <h2 class="results-heading">PC PICKED</h2>
+                <div class="results-result"></div>
+            </div>
+                <div class="results-winner hidden">
+                  <h3 class="results-text"></h3>
+                  
+                </div>
+            </div>
+        <button id="playagain"style="margin-top: -30px;" onclick="resetGame()">PLAY AGAIN</button>
+        <button id="rules" onclick="showRules()">RULES</button></div></section>
+
+    <section id="tie-page" class="hidden">
+        <h1 class="tie">TIE UP</h1>
+        <div id="results">
+        
+            <div class="results hidden">
+                <div class="H">
+                <h2 class="results-heading">YOU PICKED</h2>
+                <div class="results-result"></div>
+            </div>
+            <div class="H">
+                <h2 class="results-heading">PC PICKED</h2>
+                <div class="results-result"></div>
+            </div>
+                <div class="results-winner hidden">
+                  <h3 class="results-text"></h3>
+                  
+                </div>
+            </div>
+        <button id="replay" onclick="replay()">REPLAY</button>
+        <button id="rules" onclick="showRules()">RULES</button>
+    </section></div>
+     
+    <section id="win-page" class="hidden">
+        <div class="win">
+        <div class="star5"><img src="Star 5.png"></div>
+        <div class="star1"><img src="Star 1.png"></div>
+        <div class="star9"><img src="Star 9.png"></div>
+        <div class="star3"><img src="Star 3.png"></div>
+        <div class="star4"><img src="Star 4.png"></div>
+        <div class="star2"><img src="Star 2.png"></div>
+        <div class="star7"><img src="Star 7.png"></div>
+         <img class="prize" src="Vector.png">
+         <div class="star6"><img src="Star 6.png"></div>
+       
+
+        <div class="area1"><h1 class="head">HURRAY !!</h1>
+        <p class="para">YOU WON THE GAME</p></div>
+        
+        <button id="playagain" onclick="resetGame()">PLAY AGAIN</button>
+    </div> <button id="rules" onclick="showRules()">RULES</button>
+    </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
